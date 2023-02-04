@@ -36,6 +36,8 @@ RSpec.describe 'return all restaurants' do
   end
 
   it 'can create a new restaurant' do 
+    arbys = Restaurant.create!(name: "Arbys", description: "We have the meat!", logo: "arbys.com")
+
     restaurant = {
       "name": "Pizza Hut", 
       "description": "A pizza place with mediocre pizza", 
@@ -46,6 +48,7 @@ RSpec.describe 'return all restaurants' do
 
     last_restaurant = JSON.parse(response.body, symbolize_names: true)[:data]
 
+    expect(last_restaurant.include?(arbys)).to eq(false)
     expect(last_restaurant[:attributes][:name]).to eq("Pizza Hut")
     expect(last_restaurant[:attributes][:description]).to eq("A pizza place with mediocre pizza")
     expect(last_restaurant[:attributes][:logo]).to eq("pizzahut.com")

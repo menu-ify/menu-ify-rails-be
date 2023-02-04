@@ -19,10 +19,10 @@ ActiveRecord::Schema.define(version: 2023_02_04_044855) do
     t.bigint "restaurant_id"
     t.string "name"
     t.string "description"
-    t.string "allergens"
+    t.string "tags"
     t.string "category"
     t.string "image"
-    t.string "price"
+    t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["restaurant_id"], name: "index_menu_items_on_restaurant_id"

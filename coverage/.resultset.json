@@ -15,15 +15,30 @@
           null
         ]
       },
+      "/Users/emilyport/Desktop/Turing/mod_4/projects/menu-ify-rails-be/app/controllers/api/v1/restaurants_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/emilyport/Desktop/Turing/mod_4/projects/menu-ify-rails-be/app/controllers/application_controller.rb": {
         "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
+          1,
+          null
+        ]
+      },
+      "/Users/emilyport/Desktop/Turing/mod_4/projects/menu-ify-rails-be/app/serializers/restaurant_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1675486509
+    "timestamp": 1675488685
   }
 }

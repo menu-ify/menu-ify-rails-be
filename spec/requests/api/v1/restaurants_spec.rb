@@ -34,4 +34,21 @@ RSpec.describe 'return all restaurants' do
 
 
   end
+
+  it 'can create a new restaurant' do 
+    restaurant = {
+      "name": "Pizza Hut", 
+      "description": "A pizza place with mediocre pizza", 
+      "logo": "pizzahut.com"
+    }
+    post "/api/v1/restaurants", headers: {'CONTENT_TYPE' => 'application/json'}, params: JSON.generate(restaurant)
+    expect(response).to be_successful 
+
+    last_restaurant = JSON.parse(response.body, symbolize_names: true)[:data]
+
+    expect(last_restaurant[:attributes][:name]).to eq("Pizza Hut")
+    expect(last_restaurant[:attributes][:description]).to eq("A pizza place with mediocre pizza")
+    expect(last_restaurant[:attributes][:logo]).to eq("pizzahut.com")
+
+  end
 end

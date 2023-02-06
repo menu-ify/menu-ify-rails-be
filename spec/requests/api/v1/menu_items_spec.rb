@@ -59,17 +59,48 @@ describe 'The MenuItems API' do
       "name": "Tiramisù", 
       "description": "A tasty cake",
       "tags": "Sweet",
-      "category": "food".
+      "category": "food",
       "image": "www.cake.com",
       "price": 5.55
     }
 
     patch "/api/v1/restaurants/#{restaurant2.id}/menu_items/#{menu_item1.id}", headers: {'CONTENT_TYPE' => 'application/json' }, params: JSON.generate(menu_item_body)
     
-    expect(response).to be_successful
     json_response = JSON.parse(response.body, symbolize_names: true)
-    # require 'pry'; binding.pry
-    # patch "/api/v1/restaurants/#{restaurant2.id}/menu_items/#{menu_item1.id}"     
+    expect(response).to be_successful
+    expect(response.status).to eq(200)
+    expect(json_response).to be_a(Hash)
+    expect(json_response).to have_key(:data)
+    expect(json_response[:data]).to be_an(Hash)
+  
+    expect(json_response[:data].size).to eq(3)
+    expect(json_response[:data]).to have_key(:id)
+
+    expect(json_response[:data]).to have_key(:type)
+    expect(json_response[:data][:type]).to eq("menu_item")
     
+    expect(json_response[:data]).to have_key(:attributes)
+    expect(json_response[:data][:attributes].size).to eq(7)
+
+    expect(json_response[:data][:attributes]).to have_key(:restaurant_id)
+    expect(json_response[:data][:attributes][:restaurant_id]).to be_a(Integer)
+    
+    expect(json_response[:data][:attributes]).to have_key(:name)
+    expect(json_response[:data][:attributes][:name]).to be_a(String)
+
+    expect(json_response[:data][:attributes]).to have_key(:description)
+    expect(json_response[:data][:attributes][:description]).to be_a(String)
+
+    expect(json_response[:data][:attributes]).to have_key(:tags)
+    expect(json_response[:data][:attributes][:description]).to be_a(String)
+
+    expect(json_response[:data][:attributes]).to have_key(:category)
+    expect(json_response[:data][:attributes][:category]).to be_a(String)
+
+    expect(json_response[:data][:attributes]).to have_key(:image)
+    expect(json_response[:data][:attributes][:image]).to be_a(String)
+
+    expect(json_response[:data][:attributes]).to have_key(:price)
+    expect(json_response[:data][:attributes][:price]).to be_a(Float)
   end
 end

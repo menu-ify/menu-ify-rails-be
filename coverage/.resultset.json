@@ -1,15 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/models/menu_item.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null
-        ]
-      },
       "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/models/restaurant.rb": {
         "lines": [
           1,
@@ -58,8 +49,49 @@
           1,
           null
         ]
+      },
+      "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/models/menu_item.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/serializers/menu_item_serializer.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/controllers/api/v1/menu_items_controller.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1675541759
+    "timestamp": 1675696899
   }
 }

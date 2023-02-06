@@ -5,9 +5,28 @@ class Api::V1::MenuItemsController < ApplicationController
     render json: MenuItemSerializer.new(@restaurant.menu_items)
   end
 
+  def create
+    menu_item = MenuItem.create(menu_item_params)
+    if menu_item.save
+      render json: MenuItemSerializer.new(menu_item), status: :created
+    else
+      render json: { error: "One or more attributes is missing" }
+    end
+  end
+
   private
 
     def find_restaurant
       @restaurant = Restaurant.find(params[:restaurant_id])
+    end
+
+    def menu_item_params
+      params.require(:menu_item).permit(:restaurant_id,
+                                        :name, 
+                                        :description, 
+                                        :tags, 
+                                        :category, 
+                                        :image, 
+                                        :price)
     end
 end

@@ -48,4 +48,28 @@ describe 'The MenuItems API' do
       expect(menu_item[:attributes][:price]).to be_a Float
     end
   end
+
+  it "can edit individual menu items that belong to a restaurant" do
+    restaurant1 = Restaurant.create!(name: "Arby's", description: "We have the meats!", logo: "arbys.com")
+    restaurant2 = Restaurant.create!(name: "Noodles and Company", description: "Noodles from around the world", logo: "noodles.com")
+    create_list(:menu_item, 5, restaurant: restaurant1)
+    create_list(:menu_item, 10, restaurant: restaurant2)
+    menu_item1 = restaurant2.menu_items.first
+    menu_item_body = {
+      "name": "Tiramisù", 
+      "description": "A tasty cake",
+      "tags": "Sweet",
+      "category": "food".
+      "image": "www.cake.com",
+      "price": 5.55
+    }
+
+    patch "/api/v1/restaurants/#{restaurant2.id}/menu_items/#{menu_item1.id}", headers: {'CONTENT_TYPE' => 'application/json' }, params: JSON.generate(menu_item_body)
+    
+    expect(response).to be_successful
+    json_response = JSON.parse(response.body, symbolize_names: true)
+    # require 'pry'; binding.pry
+    # patch "/api/v1/restaurants/#{restaurant2.id}/menu_items/#{menu_item1.id}"     
+    
+  end
 end

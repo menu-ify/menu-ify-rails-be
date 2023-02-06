@@ -1,0 +1,390 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "type": "menu_item ",
+      "attributes": {
+        "restaurant_id": 100,
+        "name": "Pho with Beef",
+        "description": "Vietnamese soup with beef and veggies",
+        "tags": ["gluten free"],
+        "category": "entree",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 15.0
+      }
+    },
+    {
+      "id": 2,
+      "type": "menu_item ",
+      "attributes": {
+        "restaurant_id": 100,
+        "name": "Fresh Green Salad",
+        "description": "Vegetables and stuff with sauce",
+        "tags": ["dairy", "gluten free"],
+        "category": "appetizer",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 5.5
+      }
+    },
+    {
+      "id": 3,
+      "type": "menu_item",
+      "attributes": {
+        "restaurant_id": 100,
+        "name": "Spring Rolls",
+        "description": "3 fresh spring rolls",
+        "tags": ["gluten free"],
+        "category": "appetizer",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 7.5
+      }
+    },
+    {
+      "id": 4,
+      "type": "menu_item",
+      "attributes": {
+        "restaurant_id": 100,
+        "name": "Pho with Shrimp",
+        "description": "Vietnamese soup with shrimp and veggies",
+        "tags": ["gluten free"],
+        "category": "entree",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 16.0
+      }
+    },
+    {
+      "id": 5,
+      "type": "menu_item",
+      "attributes": {
+        "restaurant_id": 100,
+        "name": "Pho with Chicken",
+        "description": "Vietnamese soup with chicken and veggies",
+        "tags": ["gluten free"],
+        "category": "entree",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 13.50
+      }
+    },
+    {
+      "id": 6,
+      "type": "menu_item",
+      "attributes": {
+        "restaurant_id": 100,
+        "name": "Pho with Veggies",
+        "description": "Vietnamese soup with veggies",
+        "tags": ["gluten free", "vegetarian"],
+        "category": "entree",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 11.0
+      }
+    },
+    {
+      "id": 7,
+      "type": "menu_item",
+      "attributes": {
+        "restaurant_id": 100,
+        "name": "Asahi",
+        "description": "Fresh clean beer from Japan",
+        "tags": ["gluten"],
+        "category": "draft beer",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 5.5
+      }
+    },
+    {
+      "id": 8,
+      "type": "menu_item",
+      "attributes": {
+        "restaurant_id": 100,
+        "name": "Purple dragon",
+        "description": "Warm saki with a special blend of fruit juices",
+        "tags": ["gluten free"],
+        "category": "cocktail",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 8.5
+      }
+    },
+    {
+      "id": 9,
+      "type": "menu_item",
+      "attributes": {
+        "restaurant_id": 100,
+        "name": "Tiger Asian Lager",
+        "description": "Easy-drinking Asian pilsner",
+        "tags": ["gluten"],
+        "category": "draft beer",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 5.5
+      }
+    },
+    {
+      "id": 10,
+      "type": "menu_item",
+      "attributes": {
+        "restaurant_id": 100,
+        "name": "Tofu Plate",
+        "description": "A big pile of steamed rice with vegetables and fried tofu",
+        "tags": ["gluten free", "vegetarian"],
+        "category": "entree",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 12.5
+      }
+    },
+    {
+      "id": 11,
+      "type": "menu_item ",
+      "attributes": {
+        "restaurant_id": 200,
+        "name": "Huli Huli Chicken",
+        "description": "The best chicken you'll ever put in your mouth",
+        "tags": ["gluten free"],
+        "category": "entree",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 15.0
+      }
+    },
+    {
+      "id": 12,
+      "type": "menu_item ",
+      "attributes": {
+        "restaurant_id": 200,
+        "name": "Kalua Pig",
+        "description": "Pork wrapped in tea leaves and cooked in a whole in the ground",
+        "tags": ["gluten free"],
+        "category": "entree",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 16.0
+      }
+    },
+    {
+      "id": 13,
+      "type": "menu_item ",
+      "attributes": {
+        "restaurant_id": 200,
+        "name": "Manapua",
+        "description": "Soft steamed dough filled with taro",
+        "tags": ["vegetarian", "gluten"],
+        "category": "appetizer",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 4.0
+      }
+    },
+    {
+      "id": 14,
+      "type": "menu_item ",
+      "attributes": {
+        "restaurant_id": 200,
+        "name": "Longboard IPA",
+        "description": "Beer for drinking",
+        "tags": ["gluten"],
+        "category": "draft beer",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 4.0
+      }
+    },
+    {
+      "id": 15,
+      "type": "menu_item ",
+      "attributes": {
+        "restaurant_id": 200,
+        "name": "Mai Tai",
+        "description": "Fresh blend of rum, orange curaçao, fresh lime juice and orgeat",
+        "tags": ["nuts"],
+        "category": "cocktail",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 4.0
+      }
+    },
+    {
+      "id": 16,
+      "type": "menu_item ",
+      "attributes": {
+        "restaurant_id": 200,
+        "name": "Spam Musubi",
+        "description": "Fried spam, egg, and rice wrapped in nori",
+        "tags": ["egg"],
+        "category": "appetizer",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 5.0
+      }
+    },{
+      "id": 17,
+      "type": "menu_item ",
+      "attributes": {
+        "restaurant_id": 200,
+        "name": "Bento Box",
+        "description": "1/2 serving of 2 entrees with rice and salad served to-go",
+        "tags": ["gluten"],
+        "category": "entree",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 14.0
+      }
+    },{
+      "id": 18,
+      "type": "menu_item ",
+      "attributes": {
+        "restaurant_id": 200,
+        "name": "Hawaiian Mule",
+        "description": "Lime juice, pineapple juice, and vodka served in a copper cup",
+        "tags": ["none"],
+        "category": "cocktail",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 9.0
+      }
+    },{
+      "id": 19,
+      "type": "menu_item ",
+      "attributes": {
+        "restaurant_id": 200,
+        "name": "Maui's Pale Ale",
+        "description": "The palest of ales from the slopes of Haleakala",
+        "tags": ["gluten"],
+        "category": "draft beer",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 6.0
+      }
+    },{
+      "id": 20,
+      "type": "menu_item ",
+      "attributes": {
+        "restaurant_id": 200,
+        "name": "Hang 10",
+        "description": "Full-bodied brew with 10% ABV",
+        "tags": ["gluten"],
+        "category": "draft beer",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 9.0
+      }
+    },
+    {
+      "id": 21,
+      "type": "menu_item ",
+      "attributes": {
+        "restaurant_id": 300,
+        "name": "Mac and Cheese",
+        "description": "The special sauce helps it slide down",
+        "tags": ["dairy", "gluten"],
+        "category": "appetizer",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 9.0
+      }
+    },
+    {
+      "id": 22,
+      "type": "menu_item ",
+      "attributes": {
+        "restaurant_id": 300,
+        "name": "Fried Chicken and Taters",
+        "description": "Fried chicken, mashed potatoes, and gravy",
+        "tags": ["dairy"],
+        "category": "entree",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 15.0
+      }
+    },
+    {
+      "id": 23,
+      "type": "menu_item ",
+      "attributes": {
+        "restaurant_id": 300,
+        "name": "Grandpa's Moonshine",
+        "description": "A blindingly good time!",
+        "tags": ["gluten free"],
+        "category": "cocktail",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 7.0
+      }
+    },
+    {
+      "id": 24,
+      "type": "menu_item ",
+      "attributes": {
+        "restaurant_id": 300,
+        "name": "Pasbt Red Ribbon",
+        "description": "The cheapest path to bad decisions",
+        "tags": ["gluten"],
+        "category": "draft beer",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 2.0
+      }
+    },
+    {
+      "id": 25,
+      "type": "menu_item ",
+      "attributes": {
+        "restaurant_id": 300,
+        "name": "Biscuits and Gravy",
+        "description": "Flaky homemade biscuits slathered in white gravy with sausage",
+        "tags": ["gluten"],
+        "category": "entree",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 11.0
+      }
+    },
+    {
+      "id": 26,
+      "type": "menu_item ",
+      "attributes": {
+        "restaurant_id": 300,
+        "name": "Chicken Fried Steak",
+        "description": "Tender slab of cow fried with the chickens and covered in gravy",
+        "tags": ["gluten"],
+        "category": "entree",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 13.0
+      }
+    },
+    {
+      "id": 27,
+      "type": "menu_item ",
+      "attributes": {
+        "restaurant_id": 300,
+        "name": "Black Eyed Peas",
+        "description": "They sing, dance, rap and satisfy your hunger",
+        "tags": ["gluten free"],
+        "category": "appetizer",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 10.0
+      }
+    },
+    {
+      "id": 28,
+      "type": "menu_item ",
+      "attributes": {
+        "restaurant_id": 300,
+        "name": "Fried Okra",
+        "description": "Crispy on the outside and slimy on the inside, just like Ma used to make",
+        "tags": ["gluten"],
+        "category": "appetizer",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 5.0
+      }
+    },
+    {
+      "id": 29,
+      "type": "menu_item ",
+      "attributes": {
+        "restaurant_id": 300,
+        "name": "Roadkill Stew",
+        "description": "A savory blend of organic, free-range possom, raccoon, and polecate, marinated in automotive juices and lightly sprinkled with steamed kudzu",
+        "tags": ["gluten free"],
+        "category": "entree",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 5.0
+      }
+    },
+    {
+      "id": 30,
+      "type": "menu_item ",
+      "attributes": {
+        "restaurant_id": 300,
+        "name": "Mystery Mojito",
+        "description": "We don't know what's in it and neither will you, but it'll give you a buzz!",
+        "tags": ["gluten", "nuts", "soy"],
+        "category": "cocktail",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pictograms-nps-food_service.svg/640px-Pictograms-nps-food_service.svg.png",
+        "price": 3.00
+      }
+    } 
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/emilyport/Desktop/Turing/mod_4/projects/menu-ify-rails-be/app/models/menu_item.rb": {
+      "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/models/menu_item.rb": {
         "lines": [
           1,
           1,
@@ -10,7 +10,7 @@
           null
         ]
       },
-      "/Users/emilyport/Desktop/Turing/mod_4/projects/menu-ify-rails-be/app/models/restaurant.rb": {
+      "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/models/restaurant.rb": {
         "lines": [
           1,
           1,
@@ -19,7 +19,7 @@
           null
         ]
       },
-      "/Users/emilyport/Desktop/Turing/mod_4/projects/menu-ify-rails-be/app/controllers/api/v1/restaurants_controller.rb": {
+      "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/controllers/api/v1/restaurants_controller.rb": {
         "lines": [
           1,
           1,
@@ -31,19 +31,27 @@
           null,
           null,
           1,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
           1,
           1,
+          2,
           null,
           null
         ]
       },
-      "/Users/emilyport/Desktop/Turing/mod_4/projects/menu-ify-rails-be/app/controllers/application_controller.rb": {
+      "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/emilyport/Desktop/Turing/mod_4/projects/menu-ify-rails-be/app/serializers/restaurant_serializer.rb": {
+      "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/serializers/restaurant_serializer.rb": {
         "lines": [
           1,
           1,

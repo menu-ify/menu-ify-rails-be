@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/models/menu_item.rb": {
+      "/Users/emilyport/Desktop/Turing/mod_4/projects/menu-ify-rails-be/app/models/menu_item.rb": {
         "lines": [
           1,
           1,
@@ -10,7 +10,7 @@
           null
         ]
       },
-      "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/models/restaurant.rb": {
+      "/Users/emilyport/Desktop/Turing/mod_4/projects/menu-ify-rails-be/app/models/restaurant.rb": {
         "lines": [
           1,
           1,
@@ -19,7 +19,39 @@
           null
         ]
       },
-      "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/controllers/api/v1/restaurants_controller.rb": {
+      "/Users/emilyport/Desktop/Turing/mod_4/projects/menu-ify-rails-be/app/controllers/api/v1/menu_items_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/emilyport/Desktop/Turing/mod_4/projects/menu-ify-rails-be/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/emilyport/Desktop/Turing/mod_4/projects/menu-ify-rails-be/app/serializers/menu_item_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/emilyport/Desktop/Turing/mod_4/projects/menu-ify-rails-be/app/controllers/api/v1/restaurants_controller.rb": {
         "lines": [
           1,
           1,
@@ -45,13 +77,7 @@
           null
         ]
       },
-      "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/serializers/restaurant_serializer.rb": {
+      "/Users/emilyport/Desktop/Turing/mod_4/projects/menu-ify-rails-be/app/serializers/restaurant_serializer.rb": {
         "lines": [
           1,
           1,
@@ -60,6 +86,6 @@
         ]
       }
     },
-    "timestamp": 1675541759
+    "timestamp": 1675708285
   }
 }

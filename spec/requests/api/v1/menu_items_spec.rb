@@ -70,14 +70,14 @@ describe 'The MenuItems API' do
     post "/api/v1/restaurants/#{restaurant.id}/menu_items", headers: headers, params: JSON.generate(menu_item_params)
 
     expect(MenuItem.all.count).to eq(1)
-    
+
     new_menu_item = MenuItem.last
     response_data = JSON.parse(response.body, symbolize_names: true)
 
     expect(response).to be_successful
     expect(response.status).to eq(201)
 
-    expect(new_menu_item.restaurant_id).to eq(restaurant.id.to_s)
+    expect(new_menu_item.restaurant_id).to eq(restaurant.id)
     expect(new_menu_item.name).to eq(menu_item_params[:name])
     expect(new_menu_item.description).to eq(menu_item_params[:description])
     expect(new_menu_item.tags).to eq(menu_item_params[:tags])

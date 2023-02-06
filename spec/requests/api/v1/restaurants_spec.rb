@@ -77,10 +77,13 @@ RSpec.describe 'restaurant requests' do
     expect(json_response[:data]).to have_key(:type) 
     expect(json_response[:data]).to have_key(:attributes) 
     expect(json_response[:data][:attributes]).to have_key(:name)
+    expect(json_response[:data][:attributes][:name]).to be_a String 
     expect(json_response[:data][:attributes][:name]).to eq("ARBYS")
-    expect(json_response[:data][:attributes]).to have_key(:description) 
+    expect(json_response[:data][:attributes]).to have_key(:description)
+    expect(json_response[:data][:attributes][:description]).to be_a String  
     expect(json_response[:data][:attributes][:description]).to eq("We have the meat!")
-    expect(json_response[:data][:attributes]).to have_key(:logo) 
+    expect(json_response[:data][:attributes]).to have_key(:logo)
+    expect(json_response[:data][:attributes][:logo]).to be_a String  
     expect(json_response[:data][:attributes][:logo]).to eq("arbys.com")
   end
 
@@ -98,6 +101,7 @@ RSpec.describe 'restaurant requests' do
     json_response = JSON.parse(response.body, symbolize_names: true)
 
     expect(json_response).to have_key(:error)
+    expect(json_response[:error]).to be_a String
     expect(json_response[:error]).to eq("One or more attributes is missing")
   end
 end

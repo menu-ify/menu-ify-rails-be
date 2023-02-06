@@ -11,7 +11,6 @@ class Api::V1::MenuItemsController < ApplicationController
     if !params[:name].present? || !params[:description].present? || !params[:category].present? || !params[:price].present? || !params[:tags].present?
       render json: { error: "One or more attributes is missing" }
     else
-
       render json: MenuItemSerializer.new(MenuItem.update(params[:id], menu_item_params)), status: 200
     end
   end

@@ -1,6 +1,15 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/models/restaurant.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
       "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/models/menu_item.rb": {
         "lines": [
           1,
@@ -11,70 +20,55 @@
           null
         ]
       },
-      "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/models/restaurant.rb": {
+      "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/controllers/api/v1/menu_items_controller.rb": {
         "lines": [
           1,
           1,
+          null,
           1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          null,
+          2,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          3,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/controllers/application_controller.rb": {
+        "lines": [
           1,
           null
         ]
       },
       "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/serializers/menu_item_serializer.rb": {
         "lines": [
-          0,
-          0,
+          1,
+          1,
           null,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          1,
+          null
+        ]
       },
       "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/serializers/restaurant_serializer.rb": {
         "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/controllers/application_controller.rb": {
-        "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/source/Desktop/turing/menu-ify/menu-ify-rails-be/app/controllers/api/v1/menu_items_controller.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
           0,
           0,
           0,
@@ -112,6 +106,6 @@
         }
       }
     },
-    "timestamp": 1675719651
+    "timestamp": 1675721546
   }
 }

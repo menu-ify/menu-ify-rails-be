@@ -10,7 +10,7 @@ class Api::V1::MenuItemsController < ApplicationController
     if menu_item.save
       render json: MenuItemSerializer.new(menu_item), status: :created
     else
-      render json: { error: "One or more attributes is missing" }
+      render json: { error: "One or more attributes is missing" }, status: :bad_request
     end
   end
 

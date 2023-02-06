@@ -6,8 +6,6 @@ class Api::V1::MenuItemsController < ApplicationController
   end
 
   def update
-    menuitem = @restaurant.menu_items.find(params[:id])
-
     if !params[:name].present? || !params[:description].present? || !params[:category].present? || !params[:price].present? || !params[:tags].present?
       render json: { error: "One or more attributes is missing" }
     else

@@ -6,7 +6,7 @@ describe 'The MenuItems API' do
     restaurant2 = Restaurant.create!(name: "Noodles and Company", description: "Noodles from around the world", logo: "noodles.com")
     create_list(:menu_item, 5, restaurant: restaurant1)
     create_list(:menu_item, 10, restaurant: restaurant2)
-    require 'pry'; binding.pry
+
     get "/api/v1/restaurants/#{restaurant1.id}/menu_items"
 
     expect(response).to be_successful 
@@ -17,28 +17,35 @@ describe 'The MenuItems API' do
     expect(menu_items[:data]).to be_an(Array)
     expect(menu_items[:data].size).to eq(5)
 
-    expect(menu_items[0]).to have_key(:id)
-    expect(menu_items[0][:id]).to be_a String
+    menu_items[:data].each do |menu_item|
 
-    expect(menu_items[0]).to have_key(:type)
-    expect(menu_items[0][:type]).to eq("menu_item")
+      expect(menu_item).to have_key(:id)
+      expect(menu_item[:id]).to be_a String
 
-    expect(menu_items[0][:attributes]).to have_key(:name)
-    expect(menu_items[0][:attributes][:name]).to be_a String 
+      expect(menu_item).to have_key(:type)
+      expect(menu_item[:type]).to eq("menu_item")
 
-    expect(menu_items[0][:attributes]).to have_key(:description)
-    expect(menu_items[0][:attributes][:description]).to be_a String 
-    
-    expect(menu_items[0][:attributes]).to have_key(:tags)
-    expect(menu_items[0][:attributes][:name]).to be_a String 
+      expect(menu_item[:attributes]).to have_key(:name)
+      expect(menu_item[:attributes][:name]).to be_a String 
 
-    expect(menu_items[0][:attributes]).to have_key(:category)
-    expect(menu_items[0][:attributes][:description]).to be_a String 
+      expect(menu_item[:attributes]).to have_key(:restaurant_id)
+      expect(menu_item[:attributes][:restaurant_id]).to be_a Integer
+      expect(menu_item[:attributes][:restaurant_id]).to eq(restaurant1.id)
 
-    expect(menu_items[0][:attributes]).to have_key(:image)
-    expect(menu_items[0][:attributes][:description]).to be_a String 
+      expect(menu_item[:attributes]).to have_key(:description)
+      expect(menu_item[:attributes][:description]).to be_a String 
+      
+      expect(menu_item[:attributes]).to have_key(:tags)
+      expect(menu_item[:attributes][:tags]).to be_a String 
 
-    expect(menu_items[0][:attributes]).to have_key(:price)
-    expect(menu_items[0][:attributes][:logo]).to be_a Float 
+      expect(menu_item[:attributes]).to have_key(:category)
+      expect(menu_item[:attributes][:category]).to be_a String 
+
+      expect(menu_item[:attributes]).to have_key(:image)
+      expect(menu_item[:attributes][:image]).to be_a String 
+
+      expect(menu_item[:attributes]).to have_key(:price)
+      expect(menu_item[:attributes][:price]).to be_a Float
+    end
   end
 end

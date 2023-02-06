@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'The MenuItems API' do
-  it "can get all menu items for a restaurant" do
+  it 'can get all menu items for a restaurant' do
     restaurant1 = Restaurant.create!(name: "Arby's", description: "We have the meats!", logo: "arbys.com")
     restaurant2 = Restaurant.create!(name: "Noodles and Company", description: "Noodles from around the world", logo: "noodles.com")
     create_list(:menu_item, 5, restaurant: restaurant1)
@@ -47,5 +47,42 @@ describe 'The MenuItems API' do
       expect(menu_item[:attributes]).to have_key(:price)
       expect(menu_item[:attributes][:price]).to be_a Float
     end
+  end
+
+  it 'can create a menu item for a restaurant' do
+    restaurant = create(:restaurant, name: "Los Pollos Hermanos")
+    menu_item_params = { 
+                            restaurant_id: "#{restaurant.id}",
+                            name: "Spice Curls",
+                            description: "The curly fry with a southwestern kick!",
+                            tags: "vegetarian, vegan",
+                            category: "Sides",
+                            image: "https://www.lospolloshermanos.com/spice_curls.jpeg",
+                            price: 4.95
+                       }
+    headers = {
+                  'Content-Type' => 'application/json',
+                  'Accept' => 'application/json'        
+              }
+    
+    expect(MenuItem.all.count).to eq(0)
+     
+    post "/api/v1/restaurants/#{restaurant.id}/menu_items", headers: headers, params: JSON.generate(menu_item_params)
+
+    expect(MenuItem.all.count).to eq(1)
+    
+    new_menu_item = MenuItem.last
+    response_data = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response).to be_successful
+    expect(response.status).to eq(201)
+
+    expect(new_menu_item.restaurant_id).to eq(restaurant.id.to_s)
+    expect(new_menu_item.name).to eq(menu_item_params[:name])
+    expect(new_menu_item.description).to eq(menu_item_params[:description])
+    expect(new_menu_item.tags).to eq(menu_item_params[:tags])
+    expect(new_menu_item.category).to eq(menu_item_params[:category])
+    expect(new_menu_item.image).to eq(menu_item_params[:image])
+    expect(new_menu_item.price).to eq(menu_item_params[:price])
   end
 end

@@ -227,7 +227,7 @@ describe 'The MenuItems API' do
       delete "/api/v1/restaurants/#{restaurant.id}/menu_items/#{menu_item.id}", headers: headers
 
       response_data = JSON.parse(response.body, symbolize_names: true)
-      require 'pry'; binding.pry
+
       expect(response).to have_http_status(200)
       expect(response_data).to have_key(:message)
       expect(response_data[:message]).to eq("Menu item has successfully been deleted at this restaurant")

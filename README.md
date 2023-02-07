@@ -3,7 +3,15 @@
 </div>
 
 ## Table of Contents 
-
+- [Project Overview](#project-overview)
+- [Learning Goals](#learning-goals)
+- [Built With](#built-with)
+- [Setup](#setup)
+- [Endpoints](#endpoints)
+- [Gems](#gems)
+- [Schema](#schema)
+- [Contributors](#contributors)
+- [Schema](#schema)
 
 ## Project Overview 
 
@@ -30,9 +38,10 @@ This project's goal is to create a successful web application from a student-led
 
 
 ## Endpoints 
-Available Endpoints: 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/24609974-ee444c00-5719-4a1b-9f98-f07984581074?action=collection%2Ffork&collection-url=entityId%3D24609974-ee444c00-5719-4a1b-9f98-f07984581074%26entityType%3Dcollection%26workspaceId%3D2902cec5-b68c-4ae7-a836-ede59d44bd2d#?env%5BNew%20Environment%5D=W3sia2V5IjoidXJsIiwidmFsdWUiOiJodHRwczovL2pzb25wbGFjZWhvbGRlci50eXBpY29kZS5jb20iLCJlbmFibGVkIjp0cnVlLCJ0eXBlIjoiZGVmYXVsdCJ9XQ==)
 
 Local Server: http://localhost:3001
+
 Heroku Server:
 
 ### Restaurants 
@@ -110,6 +119,13 @@ JSON Response Example:
 
 
 ## Gems 
+- [Pry](https://github.com/pry/pry)
+- [RSpec-rails](https://github.com/rspec/rspec-rails)
+- [Capybara](https://github.com/teamcapybara/capybara)
+- [SimpleCov](https://github.com/simplecov-ruby/simplecov)
+- [Shoulda-Matchers](https://github.com/thoughtbot/shoulda-matchers)
+- [Faker](https://github.com/vajradog/faker-rails)
+- [Factory Bot](https://github.com/thoughtbot/factory_bot_rails)
 
 ## Schema 
 
@@ -117,8 +133,34 @@ JSON Response Example:
 
 ## Contributors 
 
+<table>
+  <tr>
+    <td><img src="https://avatars.githubusercontent.com/u/57226658?v=4"></td>
+    <td><img src="https://avatars.githubusercontent.com/u/108035840?v=4"></td>
+    <td><img src="https://avatars.githubusercontent.com/u/108249540?v=4"></td>
+  </tr>
+  <tr>
+    <td>Emily Port</td>
+    <td>Yuji Kosakowski</td>
+    <td>Gabe Nunez</td>
 
-
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/eport01">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/emily-port-3ab6389b/">LinkedIn</a>
+    </td>
+    <td>
+      <a href="https://github.com/Yuji3000">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/yujikosa/">LinkedIn</a>
+    </td>
+    <td>
+      <a href="https://github.com/MisterJackpots">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/gabriel-c-nunez/">LinkedIn</a>
+    </td>
+  </tr>
+</table>
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 

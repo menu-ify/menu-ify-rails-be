@@ -187,10 +187,10 @@ describe 'The MenuItems API' do
     restaurant1 = Restaurant.create!(name: "Arby's", description: "We have the meats!", logo: "arbys.com")
     create_list(:menu_item, 5, restaurant: restaurant1)
 
-    tiramisu = MenuItem.create!(name: "Tiramisù", description: "Yum yum cake", tags: "Sweet", category: "food", image: "www.cake.com", price: 5.55, restaurant_id: restaurant1.id)
+    tres_leches = MenuItem.create!(name: "Tres Leches", description: "Yum yum cake", tags: "Sweet", category: "food", image: "www.cake.com", price: 5.55, restaurant_id: restaurant1.id)
 
-    expect(tiramisu.name).to eq("Tiramisù")
-    expect(tiramisu.description).to eq("Yum yum cake")
+    expect(tres_leches.name).to eq("Tres Leches")
+    expect(tres_leches.description).to eq("Yum yum cake")
 
     menu_item_body = {
       "name": "", 
@@ -201,7 +201,7 @@ describe 'The MenuItems API' do
       "price": 5.55
     }
 
-    patch "/api/v1/restaurants/#{restaurant1.id}/menu_items/#{tiramisu.id}", headers: {'CONTENT_TYPE' => 'application/json' }, params: JSON.generate(menu_item_body)
+    patch "/api/v1/restaurants/#{restaurant1.id}/menu_items/#{tres_leches.id}", headers: {'CONTENT_TYPE' => 'application/json' }, params: JSON.generate(menu_item_body)
     
     json_response = JSON.parse(response.body, symbolize_names: true)
 

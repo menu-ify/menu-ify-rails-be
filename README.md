@@ -2,11 +2,20 @@
   <h1>Menu-ify API</h1>
 </div>
 
-## Table of Contents 
-
 ## Project Overview 
+This is a description of the project
 
-## Learning Goals 
+# Table of Contents
+- [Learning Goals](#learning-goals)
+- [Planning Documents](#planning-documents)
+- [Tech & Tools Used](#tech-and-tools)
+- [How to Set Up](#how-to-set-up)
+- [How to Run Test Suite](#how-to-run-test-suite)
+- [Use of Bīk-n-Brü](#use-of-bīk-n-brü)
+- [Contributors](#contributors)
+
+
+# Learning Goals 
 [Project Spec](https://mod4.turing.edu/projects/capstone/)
 
 This project's goal is to create a successful web application from a student-led project idea, focusing on Service-Oriented Architecture. This is the first time that a front-end cohort and a back-end cohort have worked together. This project is built using Agile methodologies. A main goal of this project is to focus on learning about a new technology. We decided to use consume a third party API using Python and FastAPI. That repo is found here: 
@@ -16,7 +25,7 @@ This project's goal is to create a successful web application from a student-led
 - Rails 5.2.8
 - Ruby 2.7.4
 
-## Setup 
+## Developer Setup 
 
 1. Clone the respository 
 2. cd into the root directory
@@ -27,6 +36,12 @@ This project's goal is to create a successful web application from a student-led
 7. You may run the RSpec test suite locally with `bundle exec rspec`
 8. Run `rails s` to use the localhost:3001 server 
 
+
+## Schema 
+
+## Known Issues/ Future Goals 
+
+## Contributors 
 
 ## Endpoints 
 Available Endpoints: 
@@ -115,18 +130,11 @@ JSON Response Example:
   - [Faraday](https://lostisland.github.io/faraday/)
   - [Capybara](https://github.com/teamcapybara/capybara)
   - [Figaro](https://github.com/laserlemon/figaro)
-
   - [RSpec](https://github.com/rspec/rspec-metagem)
   - [Simple-Cov](https://github.com/simplecov-ruby/simplecov)
   - [Factory Bot for Rails](https://github.com/thoughtbot/factory_bot_rails)
   - [Faker](https://github.com/faker-ruby/faker)
   - [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers)
-## Schema 
-
-## Known Issues/ Future Goals 
-
-## Contributors 
-
 
 
 

@@ -41,6 +41,7 @@ This project's goal is to create a successful web application from a student-led
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/24609974-ee444c00-5719-4a1b-9f98-f07984581074?action=collection%2Ffork&collection-url=entityId%3D24609974-ee444c00-5719-4a1b-9f98-f07984581074%26entityType%3Dcollection%26workspaceId%3D2902cec5-b68c-4ae7-a836-ede59d44bd2d#?env%5BNew%20Environment%5D=W3sia2V5IjoidXJsIiwidmFsdWUiOiJodHRwczovL2pzb25wbGFjZWhvbGRlci50eXBpY29kZS5jb20iLCJlbmFibGVkIjp0cnVlLCJ0eXBlIjoiZGVmYXVsdCJ9XQ==)
 
 Local Server: http://localhost:3001
+
 Heroku Server:
 
 ### Restaurants 
@@ -118,6 +119,13 @@ JSON Response Example:
 
 
 ## Gems 
+- [Pry](https://github.com/pry/pry)
+- [RSpec-rails](https://github.com/rspec/rspec-rails)
+- [Capybara](https://github.com/teamcapybara/capybara)
+- [SimpleCov](https://github.com/simplecov-ruby/simplecov)
+- [Shoulda-Matchers](https://github.com/thoughtbot/shoulda-matchers)
+- [Faker](https://github.com/vajradog/faker-rails)
+- [Factory Bot](https://github.com/thoughtbot/factory_bot_rails)
 
 ## Schema 
 

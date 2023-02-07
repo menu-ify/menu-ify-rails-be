@@ -2,31 +2,37 @@
   <h1>Menu-ify API</h1>
 </div>
 
-## Table of Contents 
-- [Project Overview](#project-overview)
-- [Learning Goals](#learning-goals)
-- [Built With](#built-with)
-- [Setup](#setup)
-- [Endpoints](#endpoints)
-- [Gems](#gems)
-- [Schema](#schema)
-- [Contributors](#contributors)
-- [Schema](#schema)
 
 # Project Overview 
+
 This is a description of the project
 
+Menu-ify is an application created by students of [Turing School of Software and Design](https://turing.edu/). 
 
 
 # Learning Goals 
-[Project Spec](https://mod4.turing.edu/projects/capstone/)
+- Utilize Agile methodologies to ensure deployment of MVP
 
-This project's goal is to create a successful web application from a student-led project idea, focusing on Service-Oriented Architecture. This is the first time that a front-end cohort and a back-end cohort have worked together. This project is built using Agile methodologies. A main goal of this project is to focus on learning about a new technology. We decided to use consume a third party API using Python and FastAPI. That repo is found here: 
+- Develop quality communication between front-end and back-end teams, which include daily stand-ups, weekly retros and an evolving process to achieve higher communication standards
+
+- Create micro-services including a database and external API consumption to support application features for our end users
+
+- Learn new technologies and tools (Python with FastApi Framework). That repo is found [here](https://github.com/menu-ify/menu-ify-be). 
 
 
-## Built With 
-- Rails 5.2.8
-- Ruby 2.7.4
+    [Project Spec](https://mod4.turing.edu/projects/capstone/)
+
+## Table of Contents 
+- [Project Overview](#project-overview)
+- [Learning Goals](#learning-goals)
+- [Setup](#setup)
+- [Endpoints](#endpoints)
+- [Tool and Tech](#gems)
+- [Schema](#database-schema)
+- [Contributors](#contributors)
+- [Schema](#schema)
+
+
 
 ## Developer Setup 
 
@@ -40,19 +46,52 @@ This project's goal is to create a successful web application from a student-led
 8. Run `rails s` to use the localhost:3001 server 
 
 
-## Schema 
 
-## Known Issues/ Future Goals 
+# Tech and Tools
+    
+### Built With 
+- ![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white) **2.7.4**
+- ![Rails](https://img.shields.io/badge/Ruby_on_Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white) **5.2.8.1**
+- <img src="images/rspec_badge.png" alt="RSpec" height="30"> **3.12.0**
+- ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+- ![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
+- <img src="images/CircleCi_logo.png" alt="Circle Ci" height="30">
+
+#### Gems Used
+- [Pry](https://github.com/pry/pry-rails)
+- [Faraday](https://lostisland.github.io/faraday/)
+- [Capybara](https://github.com/teamcapybara/capybara)
+- [Figaro](https://github.com/laserlemon/figaro)
+- [RSpec](https://github.com/rspec/rspec-metagem)
+- [Simple-Cov](https://github.com/simplecov-ruby/simplecov)
+- [Factory Bot for Rails](https://github.com/thoughtbot/factory_bot_rails)
+- [Faker](https://github.com/faker-ruby/faker)
+- [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers)
+
+#### Other Tools
+- Postman
+- Github Projects
+- Miro 
+
+## Database Schema
+<img src="images/Schema_design.png" alt="db schema" class="center" width="500" height=auto>
+
 
 
 
 ## Endpoints 
+The exposed endpoints are detailed below.
+
+To test endpoints using your local server(http://localhost:3001), click on the Postman link below to fork exposed endpoints.
+
+    
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/24609974-ee444c00-5719-4a1b-9f98-f07984581074?action=collection%2Ffork&collection-url=entityId%3D24609974-ee444c00-5719-4a1b-9f98-f07984581074%26entityType%3Dcollection%26workspaceId%3D2902cec5-b68c-4ae7-a836-ede59d44bd2d#?env%5BNew%20Environment%5D=W3sia2V5IjoidXJsIiwidmFsdWUiOiJodHRwczovL2pzb25wbGFjZWhvbGRlci50eXBpY29kZS5jb20iLCJlbmFibGVkIjp0cnVlLCJ0eXBlIjoiZGVmYXVsdCJ9XQ==)
 
-Local Server: http://localhost:3001
 
 Heroku Server:
 
+
+## End Point Examples
 ### Restaurants 
 <details close>
 <summary>Get all restaurants</summary>
@@ -128,22 +167,6 @@ JSON Response Example:
 
 
 
-# Tech and Tools
-#### Gems Used:
-  - [Pry](https://github.com/pry/pry-rails)
-  - [Faraday](https://lostisland.github.io/faraday/)
-  - [Capybara](https://github.com/teamcapybara/capybara)
-  - [Figaro](https://github.com/laserlemon/figaro)
-  - [RSpec](https://github.com/rspec/rspec-metagem)
-  - [Simple-Cov](https://github.com/simplecov-ruby/simplecov)
-  - [Factory Bot for Rails](https://github.com/thoughtbot/factory_bot_rails)
-  - [Faker](https://github.com/faker-ruby/faker)
-  - [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers)
-
-
-
-
-## Schema 
 
 ## Known Issues/ Future Goals 
 
@@ -152,13 +175,13 @@ JSON Response Example:
 <table>
   <tr>
     <td><img src="https://avatars.githubusercontent.com/u/57226658?v=4" width=auto height=110px></td>
-    <td><img src="https://avatars.githubusercontent.com/u/108035840?v=4" width=auto height=110px></td>
     <td><img src="https://avatars.githubusercontent.com/u/108249540?v=4"width=auto height=110px></td>
+    <td><img src="https://avatars.githubusercontent.com/u/108035840?v=4" width=auto height=110px></td>
   </tr>
   <tr>
     <td><strong>Emily Port</strong></td>
-    <td><strong>Yuji Kosakowski</strong></td>
     <td><strong>Gabe Nunez</strong></td>
+    <td><strong>Yuji Kosakowski</strong></td>
 
   </tr>
   <tr>
@@ -167,12 +190,12 @@ JSON Response Example:
       <a href="https://www.linkedin.com/in/emily-port-3ab6389b/">LinkedIn</a>
     </td>
     <td>
-      <a href="https://github.com/Yuji3000">GitHub</a><br>
-      <a href="https://www.linkedin.com/in/yujikosa/">LinkedIn</a>
-    </td>
-    <td>
       <a href="https://github.com/MisterJackpots">GitHub</a><br>
       <a href="https://www.linkedin.com/in/gabriel-c-nunez/">LinkedIn</a>
+    </td>
+    <td>
+      <a href="https://github.com/Yuji3000">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/yujikosa/">LinkedIn</a>
     </td>
   </tr>
 </table>

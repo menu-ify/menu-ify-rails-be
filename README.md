@@ -4,7 +4,6 @@
 
 ## Table of Contents 
 
-
 ## Project Overview 
 
 ## Learning Goals 
@@ -109,8 +108,19 @@ JSON Response Example:
 ### Menu Items 
 
 
-## Gems 
 
+# Tech and Tools
+#### Gems Used:
+  - [Pry](https://github.com/pry/pry-rails)
+  - [Faraday](https://lostisland.github.io/faraday/)
+  - [Capybara](https://github.com/teamcapybara/capybara)
+  - [Figaro](https://github.com/laserlemon/figaro)
+
+  - [RSpec](https://github.com/rspec/rspec-metagem)
+  - [Simple-Cov](https://github.com/simplecov-ruby/simplecov)
+  - [Factory Bot for Rails](https://github.com/thoughtbot/factory_bot_rails)
+  - [Faker](https://github.com/faker-ruby/faker)
+  - [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers)
 ## Schema 
 
 ## Known Issues/ Future Goals 

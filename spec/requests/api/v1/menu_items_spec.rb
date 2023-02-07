@@ -122,22 +122,22 @@ describe 'The MenuItems API' do
   it "can edit individual menu items that belong to a restaurant" do
     restaurant1 = Restaurant.create!(name: "Arby's", description: "We have the meats!", logo: "arbys.com")
     
-    tiramisu = MenuItem.create!(name: "Tiramisù", description: "Yum yum cake", tags: "Sweet", category: "food", image: "www.cake.com", price: 5.55, restaurant_id: restaurant1.id)
+    tiramisu = MenuItem.create!(name: "Tiramisue", description: "Yum yum cake", tags: "Sweet", category: "food", image: "www.cake.com", price: 5.55, restaurant_id: restaurant1.id)
     beans_toast = MenuItem.create!(name: "Beans on Toast", description: "English Classic!", tags: "Beanzz", category: "all day food", image: "www.Britfood.com", price: 100.00, restaurant_id: restaurant1.id)
     
-    expect(tiramisu.name).to eq("Tiramisù")
-    expect(tiramisu.description).to eq("Yum yum cake")
+    expect(beans_toast.name).to eq("Beans on Toast")
+    expect(beans_toast.description).to eq("English Classic!")
 
     menu_item_body = {
-      "name": "Tiramisu", 
-      "description": "A tasty cake!",
-      "tags": "Sweet",
-      "category": "food",
-      "image": "www.cake.com",
-      "price": 5.55
+      "name": "Bean Bomb", 
+      "description": "English Classic!",
+      "tags": "Beanzz",
+      "category": "all day food",
+      "image": "www.britfood.com",
+      "price": 100.00
     }
 
-    patch "/api/v1/restaurants/#{restaurant1.id}/menu_items/#{tiramisu.id}", headers: {'CONTENT_TYPE' => 'application/json' }, params: JSON.generate(menu_item_body)
+    patch "/api/v1/restaurants/#{restaurant1.id}/menu_items/#{beans_toast.id}", headers: {'CONTENT_TYPE' => 'application/json' }, params: JSON.generate(menu_item_body)
     
     json_response = JSON.parse(response.body, symbolize_names: true)
     expect(response).to be_successful
@@ -160,36 +160,36 @@ describe 'The MenuItems API' do
     
     expect(json_response[:data][:attributes]).to have_key(:name)
     expect(json_response[:data][:attributes][:name]).to be_a(String)
-    expect(json_response[:data][:attributes][:name]).to_not eq(beans_toast.name)
+    expect(json_response[:data][:attributes][:name]).to_not eq(tiramisu.name)
 
     expect(json_response[:data][:attributes]).to have_key(:description)
     expect(json_response[:data][:attributes][:description]).to be_a(String)
-    expect(json_response[:data][:attributes][:description]).to_not eq(beans_toast.description)
+    expect(json_response[:data][:attributes][:description]).to_not eq(tiramisu.description)
     
     expect(json_response[:data][:attributes]).to have_key(:tags)
     expect(json_response[:data][:attributes][:tags]).to be_a(String)
-    expect(json_response[:data][:attributes][:tags]).to_not eq(beans_toast.tags)
+    expect(json_response[:data][:attributes][:tags]).to_not eq(tiramisu.tags)
     
     expect(json_response[:data][:attributes]).to have_key(:category)
     expect(json_response[:data][:attributes][:category]).to be_a(String)
-    expect(json_response[:data][:attributes][:category]).to_not eq(beans_toast.category)
+    expect(json_response[:data][:attributes][:category]).to_not eq(tiramisu.category)
 
     expect(json_response[:data][:attributes]).to have_key(:image)
     expect(json_response[:data][:attributes][:image]).to be_a(String)
-    expect(json_response[:data][:attributes][:image]).to_not eq(beans_toast.image)
+    expect(json_response[:data][:attributes][:image]).to_not eq(tiramisu.image)
 
     expect(json_response[:data][:attributes]).to have_key(:price)
     expect(json_response[:data][:attributes][:price]).to be_a(Float)
-    expect(json_response[:data][:attributes][:price]).to_not eq(beans_toast.price)
+    expect(json_response[:data][:attributes][:price]).to_not eq(tiramisu.price)
   end
 
   it 'menu item update sad path' do
     restaurant1 = Restaurant.create!(name: "Arby's", description: "We have the meats!", logo: "arbys.com")
     create_list(:menu_item, 5, restaurant: restaurant1)
 
-    tiramisu = MenuItem.create!(name: "Tiramisù", description: "Yum yum cake", tags: "Sweet", category: "food", image: "www.cake.com", price: 5.55, restaurant_id: restaurant1.id)
+    tiramisu = MenuItem.create!(name: "Tiramisue", description: "Yum yum cake", tags: "Sweet", category: "food", image: "www.cake.com", price: 5.55, restaurant_id: restaurant1.id)
 
-    expect(tiramisu.name).to eq("Tiramisù")
+    expect(tiramisu.name).to eq("Tiramisue")
     expect(tiramisu.description).to eq("Yum yum cake")
 
     menu_item_body = {

@@ -2,17 +2,20 @@
   <h1>Menu-ify API</h1>
 </div>
 
-## Project Overview 
+## Table of Contents 
+- [Project Overview](#project-overview)
+- [Learning Goals](#learning-goals)
+- [Built With](#built-with)
+- [Setup](#setup)
+- [Endpoints](#endpoints)
+- [Gems](#gems)
+- [Schema](#schema)
+- [Contributors](#contributors)
+- [Schema](#schema)
+
+# Project Overview 
 This is a description of the project
 
-# Table of Contents
-- [Learning Goals](#learning-goals)
-- [Planning Documents](#planning-documents)
-- [Tech & Tools Used](#tech-and-tools)
-- [How to Set Up](#how-to-set-up)
-- [How to Run Test Suite](#how-to-run-test-suite)
-- [Use of Bīk-n-Brü](#use-of-bīk-n-brü)
-- [Contributors](#contributors)
 
 
 # Learning Goals 
@@ -41,12 +44,13 @@ This project's goal is to create a successful web application from a student-led
 
 ## Known Issues/ Future Goals 
 
-## Contributors 
+
 
 ## Endpoints 
-Available Endpoints: 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/24609974-ee444c00-5719-4a1b-9f98-f07984581074?action=collection%2Ffork&collection-url=entityId%3D24609974-ee444c00-5719-4a1b-9f98-f07984581074%26entityType%3Dcollection%26workspaceId%3D2902cec5-b68c-4ae7-a836-ede59d44bd2d#?env%5BNew%20Environment%5D=W3sia2V5IjoidXJsIiwidmFsdWUiOiJodHRwczovL2pzb25wbGFjZWhvbGRlci50eXBpY29kZS5jb20iLCJlbmFibGVkIjp0cnVlLCJ0eXBlIjoiZGVmYXVsdCJ9XQ==)
 
 Local Server: http://localhost:3001
+
 Heroku Server:
 
 ### Restaurants 
@@ -137,6 +141,42 @@ JSON Response Example:
   - [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers)
 
 
+
+
+## Schema 
+
+## Known Issues/ Future Goals 
+
+# Contributors 
+
+<table>
+  <tr>
+    <td><img src="https://avatars.githubusercontent.com/u/57226658?v=4" width=auto height=110px></td>
+    <td><img src="https://avatars.githubusercontent.com/u/108035840?v=4" width=auto height=110px></td>
+    <td><img src="https://avatars.githubusercontent.com/u/108249540?v=4"width=auto height=110px></td>
+  </tr>
+  <tr>
+    <td><strong>Emily Port</strong></td>
+    <td><strong>Yuji Kosakowski</strong></td>
+    <td><strong>Gabe Nunez</strong></td>
+
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/eport01">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/emily-port-3ab6389b/">LinkedIn</a>
+    </td>
+    <td>
+      <a href="https://github.com/Yuji3000">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/yujikosa/">LinkedIn</a>
+    </td>
+    <td>
+      <a href="https://github.com/MisterJackpots">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/gabriel-c-nunez/">LinkedIn</a>
+    </td>
+  </tr>
+</table>
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 

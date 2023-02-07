@@ -1,24 +1,124 @@
-# README
+<div align="center">
+  <h1>Menu-ify API</h1>
+</div>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Table of Contents 
 
-Things you may want to cover:
 
-* Ruby version
+## Project Overview 
 
-* System dependencies
+## Learning Goals 
+[Project Spec](https://mod4.turing.edu/projects/capstone/)
 
-* Configuration
+This project's goal is to create a successful web application from a student-led project idea, focusing on Service-Oriented Architecture. This is the first time that a front-end cohort and a back-end cohort have worked together. This project is built using Agile methodologies. A main goal of this project is to focus on learning about a new technology. We decided to use consume a third party API using Python and FastAPI. That repo is found here: 
 
-* Database creation
 
-* Database initialization
+## Built With 
+- Rails 5.2.8
+- Ruby 2.7.4
 
-* How to run the test suite
+## Setup 
 
-* Services (job queues, cache servers, search engines, etc.)
+1. Clone the respository 
+2. cd into the root directory
+3. Install gem packages: `bundle install`
+4. Setup the database: `rails db:{drop,create,migrate}`
+5. Seed the database using the rake task: `rake csv_load:all`
+6. Run `rails c` and then `Restaurant.count` and `MenuItem.count`. You should have 3 and 30 respectively 
+7. You may run the RSpec test suite locally with `bundle exec rspec`
+8. Run `rails s` to use the localhost:3001 server 
 
-* Deployment instructions
 
-* ...
+## Endpoints 
+Available Endpoints: 
+
+Local Server: http://localhost:3001
+Heroku Server:
+
+### Restaurants 
+<details close>
+<summary>Get all restaurants</summary>
+<br>
+
+Request: <br>
+```
+GET /api/v1/restaurants
+```
+Example:
+
+JSON Response Example: 
+```json 
+{
+    "data": [
+        {
+            "id": "100",
+            "type": "restaurant",
+            "attributes": {
+                "name": "Pho Kyah",
+                "description": "Experimental Asian fusion gastropub",
+                "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Ph%E1%BB%9F_v%E1%BB%8Bt_quay.jpg/640px-Ph%E1%BB%9F_v%E1%BB%8Bt_quay.jpg"
+            }
+        },
+        {
+            "id": "200",
+            "type": "restaurant",
+            "attributes": {
+                "name": "Tim's Tiki Bar",
+                "description": "All the aloha you can eat",
+                "logo": "https://publicdomainvectors.org/photos/SteveLambert_Tiki_Bar.png"
+            }
+        },
+        {...}
+    ]
+}
+```
+</details>
+
+<details close>
+<summary>Create a new restaurant</summary>
+<br>
+
+Request: <br>
+```
+POST /api/v1/restaurants
+```
+Example:
+
+JSON Response Example: 
+```json 
+
+```
+</details>
+
+<details close>
+<summary>Update existing restaurant</summary>
+<br>
+
+Request: <br>
+```
+PATCH /api/v1/restaurants/:restaurant_id
+```
+Example:
+
+JSON Response Example: 
+```json 
+
+```
+</details>
+
+### Menu Items 
+
+
+## Gems 
+
+## Schema 
+
+## Known Issues/ Future Goals 
+
+## Contributors 
+
+
+
+
+
+

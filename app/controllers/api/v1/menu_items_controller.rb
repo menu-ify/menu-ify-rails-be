@@ -22,6 +22,8 @@ class Api::V1::MenuItemsController < ApplicationController
     end
   end
 
+ 
+
   private
 
   def find_restaurant

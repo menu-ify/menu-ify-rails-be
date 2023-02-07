@@ -29,6 +29,6 @@ class Api::V1::MenuItemsController < ApplicationController
   end
 
   def menu_item_params
-    params.permit(:name, :description, :tags, :category, :image, :price)
+    params.permit(:restaurant_id, :name, :description, :tags, :category, :image, :price)
   end
 end

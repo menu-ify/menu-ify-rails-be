@@ -22,6 +22,12 @@ class Api::V1::MenuItemsController < ApplicationController
     end
   end
 
+  def destroy
+    menu_item = MenuItem.find(params[:id])
+    menu_item.destroy
+    render json: { message: "Menu item has successfully been deleted at this restaurant" }
+  end
+
   private
 
   def find_restaurant

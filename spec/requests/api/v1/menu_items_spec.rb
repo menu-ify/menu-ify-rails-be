@@ -235,5 +235,29 @@ describe 'The MenuItems API' do
       expect(MenuItem.count).to eq(0)
       expect{MenuItem.find(menu_item.id)}.to raise_error(ActiveRecord::RecordNotFound)
     end
+
+    it 'returns an error if no menu item can be found' do
+      restaurant = create(:restaurant, name: "Los Pollos Hermanos")
+      menu_item = create(:menu_item, id: 1, restaurant: restaurant, name: "Spice Curls")
+
+      expect(MenuItem.count).to eq(1)
+
+      headers = {
+                    'Content-Type' => 'application/json',
+                    'Accept' => 'application/json'        
+                }
+
+      delete "/api/v1/restaurants/#{restaurant.id}/menu_items/2", headers: headers
+
+      expect(MenuItem.count).to eq(1)
+
+      error_data = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response.status).to eq(400)
+
+      expect(error_data).to be_a(Hash)
+      expect(error_data).to have_key(:error)
+      expect(error_data[:error]).to eq("No menu item exists with that id at this restaurant")
+    end
   end
 end

@@ -104,4 +104,32 @@ RSpec.describe 'restaurant requests' do
     expect(json_response[:error]).to be_a String
     expect(json_response[:error]).to eq("One or more attributes is missing")
   end
+
+  it "can delete a chosen restaurant" do
+    arbys = Restaurant.create!(id: 1, name: "Arbys", description: "We have the meat!", logo: "arbys.com")
+    noodles = Restaurant.create!(name: "Noodles and Company", description: "Noodles from around the world", logo: "noodles.com")
+    subway = Restaurant.create!(name: "Subway", description: "Sandwiches", logo: "subway.com")
+
+    delete "/api/v1/restaurants/#{arbys.id}"
+
+    expect(response).to be_successful
+    json_response = JSON.parse(response.body, symbolize_names: true)
+
+    expect(json_response).to have_key(:success)
+    expect(json_response[:success]).to eq("Restaurant has been successfully deleted")
+    expect(json_response[:success]).to be_a(String)
+  end
+
+  it "sad path delete a chosen restaurant" do
+    arbys = Restaurant.create!(id: 1, name: "Arbys", description: "We have the meat!", logo: "arbys.com")
+    
+    delete "/api/v1/restaurants/3"
+
+    expect(response).to be_successful
+    json_response = JSON.parse(response.body, symbolize_names: true)
+
+    expect(json_response).to have_key(:error)
+    expect(json_response[:error]).to eq("No restaurant exists with that Id")
+    expect(json_response[:error]).to be_a(String)
+  end
 end

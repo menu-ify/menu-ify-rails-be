@@ -15,6 +15,16 @@ class Api::V1::RestaurantsController < ApplicationController
     end
   end
 
+  def destroy 
+    if Restaurant.find_by_id(params[:id]) == nil
+      render json: { error: "No restaurant exists with that Id"}
+    else
+      restaurant = Restaurant.find(params[:id])
+      restaurant.destroy
+      render json: { success: "Restaurant has been successfully deleted"}
+    end
+  end
+
   private 
   def restaurant_params
     params.permit(:name, :description, :logo)

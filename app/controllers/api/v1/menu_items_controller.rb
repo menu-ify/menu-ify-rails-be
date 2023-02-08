@@ -22,7 +22,15 @@ class Api::V1::MenuItemsController < ApplicationController
     end
   end
 
- 
+  def destroy
+    if MenuItem.find_by_id(params[:id]) == nil
+      render json: { error: "No menu item exists with that id at this restaurant"}, status: :bad_request
+    else
+      menu_item = MenuItem.find(params[:id])
+      menu_item.destroy
+      render json: { message: "Menu item has successfully been deleted at this restaurant" }
+    end
+  end
 
   private
 

@@ -1,6 +1,9 @@
 <div align="center">
   <h1>Menu-ify API</h1>
+  <div align="center"><img src="images/menu_photo.jpeg" alt="Deschutes Brewery GIF" class="center" width="480" height="320"></div>
 </div>
+
+<br>
 
 # Project Overview
 
@@ -157,20 +160,23 @@ PATCH /api/v1/restaurants/:restaurant_id
 ```
 Example:
 
-JSON Response Example: 
+JSON Response Example:
 ```json 
 
 ```
 </details>
 
-### Menu Items 
+<br>
 
+### Menu Items
 
-
+<br>
 
 # Known Issues and Future Goals
 
-# Contributors 
+# Contributors
+
+## Project Team
 
 <table>
   <tr>
@@ -179,26 +185,67 @@ JSON Response Example:
     <td><img src="https://avatars.githubusercontent.com/u/108035840?v=4" width=auto height=110px></td>
   </tr>
   <tr>
-    <td><strong>Emily Port</strong></td>
-    <td><strong>Gabe Nunez</strong></td>
-    <td><strong>Yuji Kosakowski</strong></td>
+    <td><div align="center"><strong>Emily Port</strong></div></td>
+    <td><div align="center"><strong>Gabe Nunez</strong></div></td>
+    <td><div align="center"><strong>Yuji Kosakowski</strong></td>
 
   </tr>
   <tr>
     <td>
-      <a href="https://github.com/eport01">GitHub</a><br>
-      <a href="https://www.linkedin.com/in/emily-port-3ab6389b/">LinkedIn</a>
+      <div align="center">
+        <a href="https://github.com/eport01">GitHub</a><br>
+        <a href="https://www.linkedin.com/in/emily-port-3ab6389b/">LinkedIn</a>
+      <div>
     </td>
     <td>
-      <a href="https://github.com/MisterJackpots">GitHub</a><br>
-      <a href="https://www.linkedin.com/in/gabriel-c-nunez/">LinkedIn</a>
+      <div align="center">
+        <a href="https://github.com/MisterJackpots">GitHub</a><br>
+        <a href="https://www.linkedin.com/in/gabriel-c-nunez/">LinkedIn</a>
+      </div>
     </td>
     <td>
-      <a href="https://github.com/Yuji3000">GitHub</a><br>
-      <a href="https://www.linkedin.com/in/yujikosa/">LinkedIn</a>
+      <div align="center">
+        <a href="https://github.com/Yuji3000">GitHub</a><br>
+        <a href="https://www.linkedin.com/in/yujikosa/">LinkedIn</a>
+      </div>
     </td>
   </tr>
 </table>
+
+## Project Manager
+
+<table>
+  <tr>
+    <td><img src="https://avatars.githubusercontent.com/u/48163945?v=4" width=110px height=auto></td>
+  </tr>
+  <tr>
+    <td><div align="center"><strong>Heather Faerber</strong></div></td>
+  </tr>
+  <tr>
+    <td>
+      <div align="center"><a href="https://github.com/hfaerber">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/heather-faerber/">LinkedIn</a></div>
+    </td>
+  </tr>
+</table>
+
+## Advisor
+
+<table>
+  <tr>
+    <td><img src="https://avatars.githubusercontent.com/u/71724135?v=4" width=110px height=auto></td>
+  </tr>
+  <tr>
+    <td><div align="center"><strong>Dara Rockwell</strong></div></td>
+  </tr>
+  <tr>
+    <td>
+      <div align="center"><a href="https://github.com/dara-rockwell">GitHub</a><br>
+      <a href="https://www.linkedin.com/in/dcrockwell/">LinkedIn</a></div>
+    </td>
+  </tr>
+</table>
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 

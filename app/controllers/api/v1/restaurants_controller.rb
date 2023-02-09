@@ -4,7 +4,12 @@ class Api::V1::RestaurantsController < ApplicationController
   end
 
   def create 
-    render json: RestaurantSerializer.new(Restaurant.create(restaurant_params)), status: 200
+    restaurant = Restaurant.create(restaurant_params)
+    if restaurant.save 
+      render json: RestaurantSerializer.new(restaurant), status: 200
+    else
+      render json: { error: "A restaurant with this name has already been created"}, status: 404 
+    end
   end
 
   def update

@@ -50,6 +50,20 @@ RSpec.describe 'restaurant requests' do
     expect(last_restaurant[:attributes][:description]).to eq("A pizza place with mediocre pizza")
     expect(last_restaurant[:attributes][:logo]).to eq("pizzahut.com")
   end
+  it 'create a new restaurant sad path, a new restaurant has to be unique' do
+    arbys = Restaurant.create!(name: "Arbys", description: "We have the meat!", logo: "arbys.com")
+    restaurant = {
+      "name": "Arbys", 
+      "description": "We have the meat!", 
+      "logo": "arbys.com"
+    }
+    post "/api/v1/restaurants", headers: {'CONTENT_TYPE' => 'application/json'}, params: JSON.generate(restaurant)
+    json_response = JSON.parse(response.body, symbolize_names: true)
+    expect(json_response[:error]).to eq("A restaurant with this name has already been created")
+
+
+  end
+
 
   it "can update a restaurant happy path" do
     arbys = Restaurant.create!(name: "Arbys", description: "We have the meat!", logo: "arbys.com")

@@ -50,18 +50,33 @@ RSpec.describe 'restaurant requests' do
     expect(last_restaurant[:attributes][:description]).to eq("A pizza place with mediocre pizza")
     expect(last_restaurant[:attributes][:logo]).to eq("pizzahut.com")
   end
+
   it 'create a new restaurant sad path, a new restaurant has to be unique' do
     arbys = Restaurant.create!(name: "Arbys", description: "We have the meat!", logo: "arbys.com")
     restaurant = {
       "name": "Arbys", 
-      "description": "We have the meat!", 
-      "logo": "arbys.com"
+      "description": "test", 
+      "logo": "test.com"
     }
     post "/api/v1/restaurants", headers: {'CONTENT_TYPE' => 'application/json'}, params: JSON.generate(restaurant)
     json_response = JSON.parse(response.body, symbolize_names: true)
-    expect(json_response[:error]).to eq("A restaurant with this name has already been created")
 
+    expect(json_response).to have_key(:error)
+    expect(json_response[:error]).to eq(["Name has already been taken"])
+  end
 
+  it 'sad path lacking input to create new restaurant' do
+    restaurant = {
+      "name": "", 
+      "description": "", 
+      "logo": "arbys.com"
+    }
+
+    post "/api/v1/restaurants", headers: {'CONTENT_TYPE' => 'application/json'}, params: JSON.generate(restaurant)
+    json_response = JSON.parse(response.body, symbolize_names: true)
+
+    expect(json_response).to have_key(:error)
+    expect(json_response[:error]).to eq(["Name can't be blank", "Description can't be blank"])
   end
 
 

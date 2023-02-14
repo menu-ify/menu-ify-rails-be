@@ -4,11 +4,11 @@ class Api::V1::RestaurantsController < ApplicationController
   end
 
   def create 
-    restaurant = Restaurant.create(restaurant_params)
+    restaurant = Restaurant.find_or_create_by(restaurant_params)
     if restaurant.save 
       render json: RestaurantSerializer.new(restaurant), status: 200
     else
-      render json: { error: "A restaurant with this name has already been created"}, status: 404 
+      render json: { "error": restaurant.errors.full_messages }, status: :bad_request 
     end
   end
 

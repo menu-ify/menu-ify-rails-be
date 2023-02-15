@@ -50,3 +50,6 @@ workflows:
   build-test-deploy:
     jobs:
       - build-and-test
+  heroku_deploy: 
+    jobs: 
+      - heroku/deploy-via-git

@@ -5,26 +5,7 @@
 
 <br>
 
-# Project Overview
-
-Menuify is an application created by students of [Turing School of Software and Design](https://turing.edu/). Front and Back-end teams collaborated on the design, development, and deployment processes throughout the course of the project.
-
-Restaurant owners can easily add or delete menus and individual menu items. Images can be added by url, or by searching a collection of images sourced from the Photo Unsplash API.
-
-Diners can readily find their desired menu with full-color images, descriptions, and prices. By placing QR codes on the tables, customers need only use their mobile device to access the user-friendly, aesthetically pleasing menu.  Specifications and requirements for this project can be found [here](https://mod4.turing.edu/projects/capstone/). <br>
-[Deployed Application Here!](https://menu-ify.vercel.app/restaurant/200)
-
-# Learning Goals
-
-- Utilize Agile methodologies to ensure deployment of MVP
-
-- Develop quality communication between front-end and back-end teams, which include daily stand-ups, weekly retros and an evolving process to achieve higher communication standards
-
-- Create micro-services including a database and external API consumption to support application features for our end users
-
-- Learn new technologies and tools (Python with FastApi Framework). That repo is found [here](https://github.com/menu-ify/menu-ify-be).
-
-## Table of Contents
+# Table of Contents
 
 - [Project Overview](#project-overview)
 - [Learning Goals](#learning-goals)
@@ -35,7 +16,33 @@ Diners can readily find their desired menu with full-color images, descriptions,
 - [Known Issues and Future Goals](#known-issues-and-future-goals)
 - [Contributors](#contributors)
 
-## Developer Setup
+# Project Overview
+
+Menuify is a full-stack application created by Backend and Frontend students of [Turing School of Software and Design](https://turing.edu/). The Menuify app allows restaurant owners the ability to easily create mobile-friendly menus to increase user experience. Instead of scrolling through a difficult to navigate pdf of a menu, a restaurant diner can view menu items in our user friendly app. Frontend and backend teams collaborated on the design, development, and deployment processes throughout the software development lifecycle. This repo is one of two REST API microservices created for the Frontend to implement. This API was built using Ruby on Rails and has CRUD functionality for Restaurants and MenuItems. 
+
+Restaurant owners can easily add, edit, and delete menus as well as create a new restaurant. Images on menus can be added by url, or incorporating our [Menuify Photo API](https://github.com/menu-ify/menu-ify-be-fastapi) microservice.
+
+
+- [Frontend Repo](https://github.com/menu-ify/menu-ify-fe)
+- [Fast API for Photos](https://github.com/menu-ify/menu-ify-be-fastapi)
+- [Deployed App](https://menu-ify.vercel.app/restaurant/200)
+
+# Learning Goals
+
+[Project Specs](https://mod4.turing.edu/projects/capstone/index.html)
+
+- Utilize Agile methodologies, Service Oriented Architecture, and Microservices to ensure deployment of a RESTful API with MVP
+
+- Develop quality communication between Frontend and Backend teams, including daily stand-ups, project retros, a project board, and a JSON contract
+
+- Gain experience using Continuous Integration tools to build and automate the deployment of features 
+
+- Create API microservices to support application features for our end users
+
+- Learn new technologies and tools (Python with FastApi Framework) 
+
+
+# Developer Setup
 
 1. Clone the respository
 2. cd into the root directory
@@ -86,18 +93,15 @@ Diners can readily find their desired menu with full-color images, descriptions,
 
 # Endpoints
 
-The exposed endpoints are detailed below.
-
-To test endpoints using your local server(http://localhost:3001), click on the Postman link below to fork exposed endpoints.
-
-    
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/24609974-ee444c00-5719-4a1b-9f98-f07984581074?action=collection%2Ffork&collection-url=entityId%3D24609974-ee444c00-5719-4a1b-9f98-f07984581074%26entityType%3Dcollection%26workspaceId%3D2902cec5-b68c-4ae7-a836-ede59d44bd2d#?env%5BNew%20Environment%5D=W3sia2V5IjoidXJsIiwidmFsdWUiOiJodHRwczovL2pzb25wbGFjZWhvbGRlci50eXBpY29kZS5jb20iLCJlbmFibGVkIjp0cnVlLCJ0eXBlIjoiZGVmYXVsdCJ9XQ==)
 
-Heroku Server: https://menu-ify-be.herokuapp.com
+- The exposed endpoints are detailed below and can either be run locally or on our heroku server.
 
-## End Point Examples
+- Local Backend Server: http://localhost:3001
 
-### Restaurants
+- Deployed Heroku Server: https://menu-ify-be.herokuapp.com
+
+## Restaurant Endpoints
 
 <details close>
 <summary>Get all restaurants</summary>
@@ -147,8 +151,8 @@ POST /api/v1/restaurants
 ```
 Example:
 
-Body:
-```
+Request Body:
+```json 
 { 
   "name": "West Colorado Burgers",
   "description": "Best burgers west of the Rockies!",
@@ -181,8 +185,8 @@ PATCH /api/v1/restaurants/:restaurant_id
 ```
 Example:
 
-Body: 
-```
+Request Body: 
+```json
 {
   "name": "Western Colorado Burgers", 
   "description": "We're better than the other place", 
@@ -207,7 +211,7 @@ JSON Response Example:
 
 <br>
 
-### Menu Items
+## Menu Items Endpoints
 </details>
 
 <details close>
@@ -218,9 +222,8 @@ Request: <br>
 ```
 GET /api/v1/restaurants/:restaurant_id/menu_items
 ```
-Example:
 
-```
+
 JSON Response Example:
 ```json 
 {
@@ -330,10 +333,10 @@ Request: <br>
 ```
 POST /api/v1/restaurants/:restaurant_id/menu_items
 ```
-Example:
 
-Body:
-```
+
+Request Body:
+```json
 {
     "name": "Spice Curls",
     "description": "The curly fry with a southwestern kick!",
@@ -371,10 +374,10 @@ Request: <br>
 ```
 PATCH /api/v1/restaurants/:restaurant_id/menu_items
 ```
-Example:
 
-Body:
-```
+
+Request Body:
+```json
 {
     "name": "Spice Curls!!!",
     "description": "The curly fry with a southwestern kick!",
@@ -412,10 +415,9 @@ Request: <br>
 ```
 POST /api/v1/restaurants
 ```
-Example:
 
-Body:
-```
+Request Body:
+```json
 { 
   "name": "West Colorado Burgers",
   "description": "Best burgers west of the Rockies!",

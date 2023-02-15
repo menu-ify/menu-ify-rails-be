@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Menu-ify API</h1>
+  <h1>Menuify API</h1>
   <div align="center"><img src="images/menu_photo.jpeg" alt="Deschutes Brewery GIF" class="center" width="480" height="320"></div>
 </div>
 
@@ -7,9 +7,12 @@
 
 # Project Overview
 
-This is a description of the project
+Menuify is an application created by students of [Turing School of Software and Design](https://turing.edu/). Front and Back-end teams collaborated on the design, development, and deployment processes throughout the course of the project.
 
-Menu-ify is an application created by students of [Turing School of Software and Design](https://turing.edu/).  Specifications and requirements for this project can be found [here](https://mod4.turing.edu/projects/capstone/).
+Restaurant owners can easily add or delete menus and individual menu items. Images can be added by url, or by searching a collection of images sourced from the Photo Unsplash API.
+
+Diners can readily find their desired menu with full-color images, descriptions, and prices. By placing QR codes on the tables, customers need only use their mobile device to access the user-friendly, aesthetically pleasing menu.  Specifications and requirements for this project can be found [here](https://mod4.turing.edu/projects/capstone/). <br>
+[Deployed Application Here!](https://menu-ify.vercel.app/restaurant/200)
 
 # Learning Goals
 
@@ -144,9 +147,27 @@ POST /api/v1/restaurants
 ```
 Example:
 
+Body:
+```
+{ 
+  "name": "West Colorado Burgers",
+  "description": "Best burgers west of the Rockies!",
+  "logo": "WestCOBurgers.calm"
+}
+```
 JSON Response Example:
 ```json 
-
+{
+    "data": {
+        "id": "123",
+        "type": "restaurant",
+        "attributes": {
+            "name": "West Colorado Burgers",
+            "description": "Best burgers west of the Rockies!",
+            "logo": "WestCOBurgers.calm"
+        }
+    }
+}
 ```
 </details>
 
@@ -160,23 +181,268 @@ PATCH /api/v1/restaurants/:restaurant_id
 ```
 Example:
 
+Body: 
+```
+{
+  "name": "Western Colorado Burgers", 
+  "description": "We're better than the other place", 
+  "logo": "westerncoburgers.net"
+}
+```
 JSON Response Example:
 ```json 
-
+{
+  "data": {
+    "id": "123",
+    "type": "restaurant",
+    "attributes": {
+        "name": "Western Colorado Burgers",
+        "description": "We're better than the other place",
+        "logo": "westerncoburgers.net"
+    }
+  }
+}
 ```
 </details>
 
 <br>
 
 ### Menu Items
+</details>
+
+<details close>
+<summary>Get all menu items from a restaurant</summary>
+<br>
+
+Request: <br>
+```
+GET /api/v1/restaurants/:restaurant_id/menu_items
+```
+Example:
+
+```
+JSON Response Example:
+```json 
+{
+    "data": [
+        {
+            "id": "4",
+            "type": "menu_item",
+            "attributes": {
+                "restaurant_id": 100,
+                "name": "Pho with Shrimp",
+                "description": "Vietnamese soup with shrimp and veggies",
+                "tags": "gluten free",
+                "category": "entree",
+                "image": "https://thelemonbowl.com/wp-content/uploads/2021/02/Vietnamese-Shrimp-Pho_25_WEB.jpg",
+                "price": 16.0
+            }
+        },
+        {
+            "id": "7",
+            "type": "menu_item",
+            "attributes": {
+                "restaurant_id": 100,
+                "name": "Asahi",
+                "description": "Fresh clean beer from Japan",
+                "tags": "gluten",
+                "category": "draft beer",
+                "image": "https://oakbeveragesinc.com/wp-content/uploads/2015/10/Asahi-Super-Dry-Bottle-500.jpg",
+                "price": 5.5
+            }
+        },
+        {
+            "id": "5",
+            "type": "menu_item",
+            "attributes": {
+                "restaurant_id": 100,
+                "name": "Pho with Chicken",
+                "description": "Vietnamese soup with chicken and veggies",
+                "tags": "gluten free",
+                "category": "entree",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Vietnamese_Pho.jpg/640px-Vietnamese_Pho.jpg",
+                "price": 13.5
+            }
+        },
+        {
+            "id": "6",
+            "type": "menu_item",
+            "attributes": {
+                "restaurant_id": 100,
+                "name": "Pho with Veggies",
+                "description": "Vietnamese soup with veggies",
+                "tags": "gluten free, vegetarian",
+                "category": "entree",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Vegetarian_Pho_%285541416031%29.jpg/640px-Vegetarian_Pho_%285541416031%29.jpg",
+                "price": 11.0
+            }
+        },
+        {
+            "id": "8",
+            "type": "menu_item",
+            "attributes": {
+                "restaurant_id": 100,
+                "name": "Tiger Asian Lager",
+                "description": "Easy-drinking Asian pilsner",
+                "tags": "gluten",
+                "category": "draft beer",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Tiger_Beer_Bottles.png/640px-Tiger_Beer_Bottles.png",
+                "price": 5.5
+            }
+        },
+        {
+            "id": "9",
+            "type": "menu_item",
+            "attributes": {
+                "restaurant_id": 100,
+                "name": "Purple dragon",
+                "description": "Warm saki with a special blend of fruit juices and whole blueberries",
+                "tags": "gluten free",
+                "category": "cocktail",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Purple_Rain_08.jpg/640px-Purple_Rain_08.jpg",
+                "price": 8.5
+            }
+        },
+        {
+            "id": "62",
+            "type": "menu_item",
+            "attributes": {
+                "restaurant_id": 100,
+                "name": "Spring Roll",
+                "description": "Fresh vegetarian spring rolls",
+                "tags": "No tags added",
+                "category": "appetizer",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Vietnamese_spring_roll.jpg/640px-Vietnamese_spring_roll.jpg",
+                "price": 8.0
+            }
+        }
+    ]
+}
+```
+</details>
+
+
+<details close>
+<summary>Create a Menu Item</summary>
+<br>
+
+Request: <br>
+```
+POST /api/v1/restaurants/:restaurant_id/menu_items
+```
+Example:
+
+Body:
+```
+{
+    "name": "Spice Curls",
+    "description": "The curly fry with a southwestern kick!",
+    "tags": "vegetarian, vegan",
+    "category": "Sides",
+    "image": "https://www.lospolloshermanos.com/spice_curls.jpeg",
+    "price": 4.95
+}
+```
+JSON Response Example:
+```json 
+{
+    "data": {
+        "id": "92",
+        "type": "menu_item",
+        "attributes": {
+            "restaurant_id": 100,
+            "name": "Spice Curls",
+            "description": "The curly fry with a southwestern kick!",
+            "tags": "vegetarian, vegan",
+            "category": "Sides",
+            "image": "https://www.lospolloshermanos.com/spice_curls.jpeg",
+            "price": 4.95
+        }
+    }
+}
+```
+</details>
+
+<details close>
+<summary>Edit a Menu Item</summary>
+<br>
+
+Request: <br>
+```
+PATCH /api/v1/restaurants/:restaurant_id/menu_items
+```
+Example:
+
+Body:
+```
+{
+    "name": "Spice Curls!!!",
+    "description": "The curly fry with a southwestern kick!",
+    "tags": "vegetarian, vegan",
+    "category": "Sides",
+    "image": "https://www.lospolloshermanos.com/spice_curls.jpeg",
+    "price": 4.50
+}
+```
+JSON Response Example:
+```json 
+{
+    "data": {
+        "id": "92",
+        "type": "menu_item",
+        "attributes": {
+            "restaurant_id": 100,
+            "name": "Spice Curls!!!",
+            "description": "The curly fry with a southwestern kick!",
+            "tags": "vegetarian, vegan",
+            "category": "Sides",
+            "image": "https://www.lospolloshermanos.com/spice_curls.jpeg",
+            "price": 4.50
+        }
+    }
+}
+```
+</details>
+
+<details close>
+<summary>Delete a Menu Item</summary>
+<br>
+
+Request: <br>
+```
+POST /api/v1/restaurants
+```
+Example:
+
+Body:
+```
+{ 
+  "name": "West Colorado Burgers",
+  "description": "Best burgers west of the Rockies!",
+  "logo": "WestCOBurgers.calm"
+}
+```
+JSON Response Example:
+```json 
+{
+    "data": {
+        "id": "123",
+        "type": "restaurant",
+        "attributes": {
+            "name": "West Colorado Burgers",
+            "description": "Best burgers west of the Rockies!",
+            "logo": "WestCOBurgers.calm"
+        }
+    }
+}
+```
+</details>
+
 
 <br>
 
-# Known Issues and Future Goals
-
-# Contributors
-
-## Project Team
+# Project Team
+## Contributors
 
 <table>
   <tr>

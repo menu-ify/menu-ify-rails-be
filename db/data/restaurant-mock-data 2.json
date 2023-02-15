@@ -1,0 +1,34 @@
+{
+  "data": [
+          {
+          "id": 100,
+          "type": "restaurant",
+          "attributes": {
+              "id": 100,
+              "name": "Pho Kyah",
+              "description": "Experimental Asian fusion gastropub",
+              "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Ph%E1%BB%9F_v%E1%BB%8Bt_quay.jpg/640px-Ph%E1%BB%9F_v%E1%BB%8Bt_quay.jpg"
+          }
+      },
+      {
+        "id": 200,
+        "type": "restaurant",
+        "attributes": {
+            "id": 200,
+            "name": "Tim's Tiki Bar",
+            "description": "All the aloha you can eat",
+             "logo": "https://publicdomainvectors.org/photos/SteveLambert_Tiki_Bar.png"
+        }
+    },
+      {
+          "id": 300,
+          "type": "restaurant",
+          "attributes": {
+              "id": 300,
+              "name": "Ruthy's",
+              "description": "Emotional support food for all the seasons of life",
+              "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Fried-Chicken-Set.jpg/640px-Fried-Chicken-Set.jpg"
+          }
+      }
+  ]
+}

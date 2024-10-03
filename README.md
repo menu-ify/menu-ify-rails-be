@@ -152,9 +152,9 @@ Example:
 Request Body:
 ```json 
 { 
-  "name": "West Colorado Burgers",
-  "description": "Best burgers west of the Rockies!",
-  "logo": "WestCOBurgers.calm"
+    "name": "West Colorado Burgers",
+    "description": "Best burgers west of the Rockies!",
+    "logo": "WestCOBurgers.calm"
 }
 ```
 JSON Response Example:
@@ -186,23 +186,23 @@ Example:
 Request Body:
 ```json
 {
-  "name": "Western Colorado Burgers", 
-  "description": "We're better than the other place", 
-  "logo": "westerncoburgers.net"
+    "name": "Western Colorado Burgers", 
+    "description": "We're better than the other place", 
+    "logo": "westerncoburgers.net"
 }
 ```
 JSON Response Example:
 ```json 
 {
-  "data": {
-    "id": "123",
-    "type": "restaurant",
-    "attributes": {
-        "name": "Western Colorado Burgers",
-        "description": "We're better than the other place",
-        "logo": "westerncoburgers.net"
+    "data": {
+        "id": "123",
+        "type": "restaurant",
+        "attributes": {
+            "name": "Western Colorado Burgers",
+            "description": "We're better than the other place",
+            "logo": "westerncoburgers.net"
+        }
     }
-  }
 }
 ```
 </details>
@@ -411,29 +411,13 @@ JSON Response Example:
 
 Request: <br>
 ```
-POST /api/v1/restaurants
+DELETE /api/v1/restaurants/:restaurant_id/menu_items/:menu_item_id
 ```
 
-Request Body:
-```json
-{ 
-  "name": "West Colorado Burgers",
-  "description": "Best burgers west of the Rockies!",
-  "logo": "WestCOBurgers.calm"
-}
-```
 JSON Response Example:
 ```json 
 {
-    "data": {
-        "id": "123",
-        "type": "restaurant",
-        "attributes": {
-            "name": "West Colorado Burgers",
-            "description": "Best burgers west of the Rockies!",
-            "logo": "WestCOBurgers.calm"
-        }
-    }
+    "message": "Menu item has successfully been deleted at this restaurant"
 }
 ```
 </details>

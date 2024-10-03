@@ -1,6 +1,6 @@
 <div align="center">
   <h1>Menuify API</h1>
-  <div align="center"><img src="images/menu_photo.jpeg" alt="Deschutes Brewery GIF" class="center" width="480" height="320"></div>
+  <div align="center"><img src="images/menu_photo.jpeg" alt="" class="center" width="480" height="320"></div>
 </div>
 
 <br>
@@ -18,10 +18,9 @@
 
 # Project Overview
 
-Menuify is a full-stack application created by Backend and Frontend students of [Turing School of Software and Design](https://turing.edu/). The Menuify app allows restaurant owners the ability to easily create mobile-friendly menus to increase user experience. Instead of scrolling through a difficult to navigate pdf of a menu, a restaurant diner can view menu items in our user friendly app. Frontend and backend teams collaborated on the design, development, and deployment processes throughout the software development lifecycle. This repo is one of two REST API microservices created for the Frontend to implement. This API was built using Ruby on Rails and has CRUD functionality for Restaurants and MenuItems. 
+Menuify is a full-stack application created by Backend and Frontend students of [Turing School of Software and Design](https://turing.edu/). The Menuify app allows restaurant owners the ability to easily create mobile-friendly menus to increase user experience. Instead of scrolling through a difficult to navigate pdf of a menu, a restaurant diner can view menu items in our user friendly app. Frontend and backend teams collaborated on the design, development, and deployment processes throughout the software development lifecycle. This repo is one of two REST API microservices created for the Frontend to implement. This API was built using Ruby on Rails and has CRUD functionality for Restaurants and MenuItems.
 
 Restaurant owners can easily add, edit, and delete menus as well as create a new restaurant. Images on menus can be added by url, or incorporating our [Menuify Photo API](https://github.com/menu-ify/menu-ify-be-fastapi) microservice.
-
 
 - [Frontend Repo](https://github.com/menu-ify/menu-ify-fe)
 - [Fast API for Photos](https://github.com/menu-ify/menu-ify-be-fastapi)
@@ -35,12 +34,11 @@ Restaurant owners can easily add, edit, and delete menus as well as create a new
 
 - Develop quality communication between Frontend and Backend teams, including daily stand-ups, project retros, a project board, and a JSON contract
 
-- Gain experience using Continuous Integration tools to build and automate the deployment of features 
+- Gain experience using Continuous Integration tools to build and automate the deployment of features
 
 - Create API microservices to support application features for our end users
 
-- Learn new technologies and tools (Python with FastApi Framework) 
-
+- Learn new technologies and tools (Python with FastApi Framework)
 
 # Developer Setup
 
@@ -59,9 +57,9 @@ Restaurant owners can easily add, edit, and delete menus as well as create a new
 
 ## Built With
 
-- ![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white) **2.7.2**
-- ![Rails](https://img.shields.io/badge/Ruby_on_Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white) **5.2.8.1**
-- <img src="images/rspec_badge.png" alt="RSpec" height="30"> **3.12.0**
+- ![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white) **3.2.2**
+- ![Rails](https://img.shields.io/badge/Ruby_on_Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white) **7.0.8.4**
+- <img src="images/rspec_badge.png" alt="RSpec" height="30"> **3.12.2**
 - ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 - <img src="images/postman_badge.png" alt="Postman" height="30">
 - ![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
@@ -154,9 +152,9 @@ Example:
 Request Body:
 ```json 
 { 
-  "name": "West Colorado Burgers",
-  "description": "Best burgers west of the Rockies!",
-  "logo": "WestCOBurgers.calm"
+    "name": "West Colorado Burgers",
+    "description": "Best burgers west of the Rockies!",
+    "logo": "WestCOBurgers.calm"
 }
 ```
 JSON Response Example:
@@ -185,26 +183,26 @@ PATCH /api/v1/restaurants/:restaurant_id
 ```
 Example:
 
-Request Body: 
+Request Body:
 ```json
 {
-  "name": "Western Colorado Burgers", 
-  "description": "We're better than the other place", 
-  "logo": "westerncoburgers.net"
+    "name": "Western Colorado Burgers", 
+    "description": "We're better than the other place", 
+    "logo": "westerncoburgers.net"
 }
 ```
 JSON Response Example:
 ```json 
 {
-  "data": {
-    "id": "123",
-    "type": "restaurant",
-    "attributes": {
-        "name": "Western Colorado Burgers",
-        "description": "We're better than the other place",
-        "logo": "westerncoburgers.net"
+    "data": {
+        "id": "123",
+        "type": "restaurant",
+        "attributes": {
+            "name": "Western Colorado Burgers",
+            "description": "We're better than the other place",
+            "logo": "westerncoburgers.net"
+        }
     }
-  }
 }
 ```
 </details>
@@ -413,29 +411,13 @@ JSON Response Example:
 
 Request: <br>
 ```
-POST /api/v1/restaurants
+DELETE /api/v1/restaurants/:restaurant_id/menu_items/:menu_item_id
 ```
 
-Request Body:
-```json
-{ 
-  "name": "West Colorado Burgers",
-  "description": "Best burgers west of the Rockies!",
-  "logo": "WestCOBurgers.calm"
-}
-```
 JSON Response Example:
 ```json 
 {
-    "data": {
-        "id": "123",
-        "type": "restaurant",
-        "attributes": {
-            "name": "West Colorado Burgers",
-            "description": "Best burgers west of the Rockies!",
-            "logo": "WestCOBurgers.calm"
-        }
-    }
+    "message": "Menu item has successfully been deleted at this restaurant"
 }
 ```
 </details>
